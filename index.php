@@ -177,11 +177,11 @@
 						</div>
 					</section>
 
-
-			</div>
-			<?php
+<?php
 	include $tpl."footer.php";
 ?>
+			</div>
+		
 
 		<!-- Scripts -->
 		
