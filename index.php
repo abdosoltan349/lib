@@ -1,6 +1,11 @@
 <!DOCTYPE HTML>
 <?php
 	include "init.php";
+	session_start();
+	if(!isset($_SESSION["username"])){
+		header("Location: signup.php");
+        exit();
+	}
 	?>
 <html lang="en">
 	<head>
@@ -182,15 +187,15 @@
 ?>
 			</div>
 		
-
+<script>
+function logout() {
+ <?php
+ session_destroy();
+?>
+}
+</script>
 		<!-- Scripts -->
 		
-			<script>
-				
-						//window.location.href = "signup.html";
-	
-
-			</script>
 			<script src="<?php echo $js?>jquery.min.js"></script>
 			<script src="<?php echo $js?>jquery.scrolly.min.js"></script>
 			<script src="<?php echo $js?>jquery.scrollex.min.js"></script>
