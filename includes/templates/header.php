@@ -1,4 +1,7 @@
-<body>
-<header>
-<h1>Header</h1>
-</header>
+<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>IQRAA</strong></a><div style="width: 40%;height:50px ;"><img id="IQ" src="<?php echo $images?>Logo_crop_1.png"></div>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
