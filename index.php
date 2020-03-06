@@ -3,7 +3,12 @@
 	include "init.php";
 	session_start();
 	if(!isset($_SESSION["username"])){
-		header("Location: signup.php");
+		header("Location: login.php");
+        exit();
+	}
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		unset ($_SESSION["username"]);
+		header("Location: login.php");
         exit();
 	}
 	?>
@@ -151,13 +156,11 @@
 ?>
 			</div>
 		
-<script>
-function logout() {
- <?php
- session_destroy();
-?>
-}
-</script>
+
+
+ 
+
+
 		<!-- Scripts -->
 		
 			<script src="<?php echo $js?>jquery.min.js"></script>
