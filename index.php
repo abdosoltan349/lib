@@ -58,60 +58,24 @@
 
 						<!-- One -->
 							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="<?php echo $images?>Education.jpeg" alt="Education" />
-									</span>
-									<header class="major">
-										<h3><a href="education.html" class="link">Education</a></h3>
-										<p>Books in Schools And Universities</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="<?php echo $images?>history.jpg" alt="History" />
-									</span>
-									<header class="major">
-										<h3><a href="History.html" class="link">History</a></h3>
-										<p>Know About the past</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="<?php echo $images?>Art.jpg" alt="art" />
-									</span>
-									<header class="major">
-										<h3><a href="art.html" class="link">Art</a></h3>
-										<p>Design your life ^_^</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="<?php echo $images?>stack-of-books-vintage-books-book-books.jpg" alt="novels" />
-									</span>
-									<header class="major">
-										<h3><a href="intro.html" class="link">Novels</a></h3>
-										<p>Enjoy with interesting Stories</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="<?php echo $images?>Health.jpg" alt="Health" />
-									</span>
-									<header class="major">
-										<h3><a href="Health.html" class="link">Health</a></h3>
-										<p>Be Healthy</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="<?php echo $images?>Travelling.jpg" alt="Travel" />
-									</span>
-									<header class="major">
-										<h3><a href="Coming-Soon.html" class="link">Travel</a></h3>
-										<p>Let's discover the world!</p>
-									</header>
-								</article>
+							<?php
+							$stmt2 = $conn->prepare("SELECT * FROM sections");
+							$stmt2->execute();
+							$sections = $stmt2 ->fetchAll();
+							foreach($sections as $section){
+								echo '<article>';
+								echo '<span class="image">';
+								echo '<img src="'.$section['image'].'"'.'alt="'.$section['name'].'"'.'/>';
+								echo '</span>';
+								echo '<header class="major">';
+								echo '<h3>';
+								echo '<a href="#" class="link">'.$section['name'].'</a>';
+								echo '</h3>';
+								echo '<p>'.$section['description'].'</p>';
+								echo '</header>';
+								echo '</article>';
+							}
+							?>
 							</section>
 
 						<!-- Two -->
