@@ -74,7 +74,7 @@
 								echo '</span>';
 								echo '<header class="major">';
 								echo '<h3>';
-								echo '<a href="#" class="link">'.$section['name'].'</a>';
+								echo '<a href="Books.php" class="link">'.$section['name'].'</a>';
 								echo '</h3>';
 								echo '<p>'.$section['description'].'</p>';
 								echo '</header>';

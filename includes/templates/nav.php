@@ -9,7 +9,7 @@
 						<ul class="actions stacked">
 						<li><form method = "POST" action = "<?php echo $_SERVER["PHP_SELF"]?>">
 						<input type = "submit" class="button primary fit" id ="btn-logout" value = "logout"></input>
-						</form></li>
+						</li>
 							<li <?php if(isset($_SESSION["username"])){echo "hidden";}?>><a href="login.php" class="button fit">Log In</a></li>
 						</ul>
 					</nav>
